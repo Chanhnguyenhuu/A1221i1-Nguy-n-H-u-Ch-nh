@@ -13,7 +13,11 @@
     function tinh() {
         let canh = document.getElementById("canh").value;
         let dientich = parseInt(canh) * parseInt(canh);
-        document.getElementById("kq").innerHTML = dientich;
+        if (canh > 0){
+            document.getElementById("kq").innerHTML = dientich;
+        } else {
+            document.getElementById("kq").innerHTML = "Độ dài không đúng";
+        }
     }
 </script>
 </body>

@@ -15,8 +15,13 @@
   function tinh() {
     let vuong1 = document.getElementById("vuong1").value;
     let vuong2 = document.getElementById("vuong2").value;
-    let dientich = (parseInt(vuong1) * parseInt(vuong2))/2;
-    document.getElementById("kq").innerHTML = dientich;
+    let dientich;
+    if(parseInt(vuong1) > 0 && parseInt(vuong2) > 0) {
+        dientich = (parseInt(vuong1) * parseInt(vuong2))/2;
+        document.getElementById("kq").innerHTML = dientich;
+    } else {
+        document.getElementById("kq").innerHTML = "Độ dài nhập không đúng";
+    }
   }
 </script>
 </body>

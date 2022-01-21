@@ -13,7 +13,11 @@
     function doi() {
         let met = document.getElementById("met").value;
         let feet = parseInt(met) * 3.2808;
-        document.getElementById("kq").innerHTML = feet;
+        if (met > 0){
+            document.getElementById("kq").innerHTML = feet;
+        } else {
+            document.getElementById("kq").innerHTML = "Độ dài không đúng";
+        }
     }
 </script>
 </body>
