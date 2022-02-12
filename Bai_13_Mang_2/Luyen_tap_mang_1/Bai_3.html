@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="name" type="number">
+<button onclick="add()">Add</button>
+<script>
+    let array = [];
+    let max = 0;
+    let S = 0;
+    let TB=0;
+    function add() {
+        name = document.getElementById("name").value;
+        array.push(parseInt(name));
+    }
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > max){
+            max = array[i];
+        }
+    }
+    for (let i=0; i < array.length; i++){
+        S += array[i];
+    }
+    TB = S/array.length;
+    console.log(array);
+    console.log("Giá trị lớn nhất trong mảng là " + max);
+    console.log("Giá trị trung bình là: " + TB);
+</script>
+</body>
+</html>
