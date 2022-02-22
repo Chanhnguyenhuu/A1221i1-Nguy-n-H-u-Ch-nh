@@ -7,11 +7,11 @@
 <body>
 <script>
     let array = [];
-    let max = 0;
     let j=0;
     for (let i = 0; i < 10; i++) {
         array.push(parseInt(prompt("Nhập phần tử của mảng")));
     }
+    let max = array[0];
     for (let i = 0; i < array.length; i++) {
         if (array[i] > max){
             max = array[i];
