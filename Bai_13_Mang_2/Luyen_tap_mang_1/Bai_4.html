@@ -5,24 +5,27 @@
     <title>Title</title>
 </head>
 <body>
-<input id="num" type="number">
-<button onclick="add()">Add</button>
 <script>
-    let array1 = [];
-
-    function add() {
-        num = document.getElementById("num").value;
-        array1.push(parseInt(num));
-        //console.log(array1);
-        let a = array1.length;
-        let array2 = [];
-        for (let i = 0; i < a; i++) {
-            array2.push(array1[a - 1]);
-            a = a - 1;
+    function daonguoc(array) {
+        let n = array.length;
+        for (let i = 0; i < n; i++) {
+            let a = array[i];
+            array[i] = array[n - 1];
+            array[n - 1] = a;
+            n = n - 1;
         }
-        console.log(array1[a - 1])
-        //console.log(array1);
+        return array;
     }
+    let array = [];
+    let soLuong = parseInt(prompt("Nhập số phần tử của mảng"));
+    while (soLuong <= 0) {
+        soLuong = parseInt(prompt("Nhập sai, hãy nhập lại"));
+    }
+    for (let i = 0; i < soLuong; i++) {
+        array[i] = parseInt(prompt("Nhập phần tử thứ " + i + " của mảng"));
+    }
+    alert("Mảng trước khi đảo ngược là: " + array);
+    alert("Mảng đảo ngược là: " + daonguoc(array));
 </script>
 </body>
 </html>
